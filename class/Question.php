@@ -9,6 +9,8 @@ class Question
 
     public function __construct(array $data)
     {
+        // Ma classe Question est instanciée avec mes données de la BDD
+        // c'est devenu une entité
         $this->content = $data['content'];
         $this->id = $data['id'];
         $this->explanation = $data['explanation'];
