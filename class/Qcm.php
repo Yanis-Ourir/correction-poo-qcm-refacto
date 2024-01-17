@@ -42,7 +42,8 @@ class Qcm
     public function getQuestions(): array
     {
         $request = $this->db->query('SELECT * FROM question');
-        $this->hydrate($request->fetchAll()); // je récupère toutes les questions de la BDD et je les envoie en argument de ma méthode hydrate
+        $questions = $request->fetchAll();
+        $this->hydrate($questions); // je récupère toutes les questions de la BDD et je les envoie en argument de ma méthode hydrate
         return $this->questions;
     }
 
